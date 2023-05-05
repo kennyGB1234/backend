@@ -15,10 +15,10 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-const rutasUsuarios = require("../backend/routes/rutas-usuarios");
+const rutasUsuarios = require("./routes/rutas-usuarios");
 app.use("/api/usuarios", rutasUsuarios);
 
-const rutasCoches = require("../backend/routes/rutas-coches");
+const rutasCoches = require("./routes/rutas-coches");
 app.use("/api/coches", rutasCoches);
 
 
