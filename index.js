@@ -1,6 +1,6 @@
 
 port = 5000;
-// index.js
+
 const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
@@ -8,10 +8,6 @@ require("dotenv").config();
 
 const app = express();
 
-// const corsOptions = {
-// 	origin: 'http://localhost:3000',
-// 	optionsSuccessStatus: 200,
-// };
 
 app.use(cors());
 app.use(express.json());
@@ -24,7 +20,7 @@ app.use("/api/coches", rutasCoches);
 
 
 app.use((req, res) => {
-  // Middleware que se ejecuta cuando el servidor no tiene la ruta que se ha enviado desde el cliente
+
   res.status(404);
   res.json({
     mensaje: "Información no encontrada",
